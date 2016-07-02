@@ -2,7 +2,7 @@
 //------------Start-------------//
 header("cache-control:no-cache,must-revalidate");//No-Cache
 header("Content-Type:text/html;charset=UTF-8");//UTF-8
-//-------------通用-------------//
+//-------------通用-------------// 
 $NAME = "UPlus";            //名称
 $Server = "127.0.0.1";      //地址
 $Port = "80";               //端口
