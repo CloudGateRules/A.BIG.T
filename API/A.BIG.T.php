@@ -59,7 +59,7 @@ echo trim(fgets($Default)).",DIRECT"."\r\n";
 fclose($Default);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# Default Module下载失败!\r\n";//
 }
 //PROXY
 if($Proxy){//判断打开错误
@@ -72,7 +72,7 @@ echo trim(fgets($Proxy)).",Proxy"."\r\n";
 fclose($Proxy);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# Proxy Module下载失败!\r\n";//
 }
 //DIRECT
 if($DIRECT){//判断打开错误
@@ -85,7 +85,7 @@ echo trim(fgets($DIRECT)).",DIRECT"."\r\n";
 fclose($DIRECT);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# DIRECT Module下载失败!\r\n";//
 }
 //REJECT
 if($REJECT){//判断打开错误
@@ -98,7 +98,7 @@ echo trim(fgets($REJECT)).",REJECT"."\r\n";
 fclose($REJECT);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# REJECT Module下载失败!\r\n";//
 }
 //KEYWORD
 if($KEYWORD){//判断打开错误
@@ -112,7 +112,7 @@ echo fgets($KEYWORD)."";
 fclose($KEYWORD);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# KEYWORD Module下载失败!\r\n";//
 }
 //IPCIDR
 if($IPCIDR){//判断打开错误
@@ -126,7 +126,7 @@ echo fgets($IPCIDR)."";
 fclose($IPCIDR);
 }
 }else {
-  echo "下载失败!";//
+  echo "\r\n# IPCIDR Module下载失败!\r\n";//
 }
 //Other
 echo"\r\n# Other\r\n";
