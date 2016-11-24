@@ -1,8 +1,5 @@
 <?php
 
-# 引用Controller控制器模块
-require '../Controller/Controller.php';
-
 # 关闭所有 Notice | Warning 级别的错误
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 
@@ -11,7 +8,21 @@ header("cache-control:no-cache,must-revalidate");
 header("Content-Type:text/html;charset=UTF-8");
 header('Content-Disposition: attachment; filename='.'A.BIG.T.Conf');
 
-# Surge[General]规则模板
+# 设置开启哪些模块 | 必须放置在最前面
+$DefaultModule   = "true";
+$AdvancedModule  = "true";
+$DIRECTModule    = "true";
+$REJECTModule    = "true";
+$USERAGENTModule = "true";
+$KEYWORDModule   = "true";
+$IPCIDRModule    = "true";
+$OtherModule     = "true";
+$RewriteModule   = "true";
+
+# 引用Controller控制器模块
+require '../Controller/Controller.php';
+
+# A.BIG.T[General]规则模板
 echo "[General]\r\n";
 echo "bypass-system = true\r\n";
 echo "skip-proxy = 10.0.0.0/8, 17.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, localhost, *.local, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, *.crashlytics.com\r\n";

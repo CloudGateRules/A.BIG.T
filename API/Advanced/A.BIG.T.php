@@ -1,8 +1,5 @@
 <?php
 
-# 引用Controller控制器模块
-require '../Controller/Controller.php';
-
 # 关闭所有 Notice | Warning 级别的错误
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 
@@ -10,6 +7,9 @@ error_reporting(E_ALL^E_NOTICE^E_WARNING);
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:text/html;charset=UTF-8");
 header('Content-Disposition: attachment; filename='.'A.BIG.T.Conf');
+
+# 引用Controller控制器模块
+require '../Controller/Controller.php';
 
 # 检测GET参数
 if(empty($Logo)){$Logo="true";}else{$Logo=$Logo;}
@@ -47,7 +47,7 @@ $IPCIDR   = preg_replace('/([^])([ \s]+)/','IP-CIDR,$1$2,no-resolve',$IPCIDRCURL
 $Rewrite  = preg_replace('/([^])([ \s]+)/','$1$2',$RewriteCURLF."\r\n");
 $Other    = preg_replace('/([^])([ \s]+)/','$1$2',$OtherCURLF."\r\n");
 
-# Surge[General]规则模板
+# A.BIG.T[General]规则模板
 echo "[General]\r\n";
 echo "bypass-system = true\r\n";
 echo "skip-proxy = 10.0.0.0/8, 17.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, localhost, *.local, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, *.crashlytics.com\r\n";
