@@ -10,7 +10,7 @@
 **更新记录: CloudGate规则 [更新记录](UPdate.txt) 列表**
 
 ## 规则地址
-#### 主用线路: http://UPlus7.Win/Proxy/A.BIG.T.php
+#### 主用线路: http://BurpSuite.Site/Rule/General/A.BIG.T.php
 #### 备用线路: https://Config.daoapp.io/Proxy/A.BIG.T.php
 
 ## 更新规则
