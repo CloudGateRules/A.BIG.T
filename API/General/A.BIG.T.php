@@ -1,14 +1,9 @@
 <?php
 
-# 关闭所有 Notice | Warning 级别的错误
-error_reporting(E_ALL^E_NOTICE^E_WARNING);
-
-# 页面禁止缓存 | UTF-8编码 | 触发下载
-header("cache-control:no-cache,must-revalidate");
-header("Content-Type:text/html;charset=UTF-8");
+# 触发下载
 header('Content-Disposition: attachment; filename='.'A.BIG.T.Conf');
 
-# 设置开启哪些模块 | 必须放置在最前面
+# 设置开启哪些模块 | 必须放置在Controller控制器前面
 $DefaultModule   = "true";
 $AdvancedModule  = "true";
 $DIRECTModule    = "true";
@@ -36,9 +31,9 @@ echo "# A.BIG.T Config File [CloudGate]\r\n";
 echo "# Download Time: " . date("Y-m-d H:i:s") . "\r\n";
 echo "# \r\n";
 echo "[Proxy]\r\n";
-echo "🇨🇳 = custom,172.0.0.1,80,aes-256-cfb,Password,$Module\r\n";
-echo "🇳🇫 = custom,172.0.0.1,80,aes-256-cfb,Password,$Module\r\n";
-echo "🇬🇧 = custom,172.0.0.1,80,aes-256-cfb,Password,$Module\r\n";
+echo "🇨🇳 = custom,172.0.0.1,80,aes-256-cfb,Password\r\n";
+echo "🇳🇫 = custom,172.0.0.1,80,aes-256-cfb,Password\r\n";
+echo "🇬🇧 = custom,172.0.0.1,80,aes-256-cfb,Password\r\n";
 echo "[Proxy Group]\r\n";
 echo "Proxy = select, 🇨🇳, 🇳🇫, 🇬🇧\r\n";
 

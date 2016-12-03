@@ -1,12 +1,19 @@
 <?php
 
-# 关闭所有 Notice | Warning 级别的错误
-error_reporting(E_ALL^E_NOTICE^E_WARNING);
-
-# 页面禁止缓存 | UTF-8编码 | 触发下载
-header("cache-control:no-cache,must-revalidate");
-header("Content-Type:text/html;charset=UTF-8");
+# 触发下载
 header('Content-Disposition: attachment; filename='.'A.BIG.T.Conf');
+
+# 设置开启哪些模块 | 必须放置在Controller控制器前面
+$DefaultModule   = "true";
+$AdvancedModule  = "true";
+$BasicModule     = "true";
+$DIRECTModule    = "true";
+$REJECTModule    = "true";
+$KEYWORDModule   = "true";
+$IPCIDRModule    = "true";
+$OtherModule     = "true";
+$RewriteModule   = "true";
+$USERAGENTModule = "true";
 
 # 引用Controller控制器模块
 require '../Controller/Controller.php';
@@ -38,8 +45,6 @@ if($Rule=="true"){$AdvancedCURLF=$BasicCURLF;}elseif($Rule=="false"){$AdvancedCU
 if($Apple=="true"){$Default  = preg_replace('/([^])([ \s]+)/','$1,Proxy$2',$DefaultCURLF."\r\n");}
 elseif($Apple=="false"){$Default  = preg_replace('/([^])([ \s]+)/','$1,DIRECT$2',$DefaultCURLF."\r\n");}
 $Advanced = preg_replace('/([^])([ \s]+)/','$1,Proxy$2',$AdvancedCURLF."\r\n");
-$Advanced = preg_replace('/([^])([ \s]+)/','$1,Proxy$2',$AdvancedCURLF."\r\n");
-$Advanced = preg_replace('/([^])([ \s]+)/','$1,Proxy$2',$AdvancedCURLF."\r\n");
 $DIRECT   = preg_replace('/([^])([ \s]+)/','$1,DIRECT$2',$DIRECTCURLF."\r\n");
 $REJECT   = preg_replace('/([^])([ \s]+)/','$1,REJECT$2',$REJECTCURLF."\r\n");
 $KEYWORD  = preg_replace('/([^])([ \s]+)/','DOMAIN-KEYWORD,$1$2,force-remote-dns',$KEYWORDCURLF."\r\n");
@@ -65,27 +70,27 @@ echo "# A.BIG.T Config File [CloudGate]\r\n";
 echo "# Download Time: " . date("Y-m-d H:i:s") . "\r\n";
 echo "# \r\n";
 echo "[Proxy]\r\n";
-if ($Group<"2"){echo "$Flag1 = custom,$Config1,$Module\r\n";}
+if ($Group<"2"){echo "$Flag1 = custom,$Config1\r\n";}
 elseif ($Group<"3"){
-echo "$Flag1 = custom,$Config1,$Module\r\n";
-echo "$Flag2 = custom,$Config2,$Module\r\n";}
+echo "$Flag1 = custom,$Config1\r\n";
+echo "$Flag2 = custom,$Config2\r\n";}
 elseif ($Group<"4"){
-echo "$Flag1 = custom,$Config1,$Module\r\n";
-echo "$Flag2 = custom,$Config2,$Module\r\n";
-echo "$Flag3 = custom,$Config3,$Module\r\n";}
+echo "$Flag1 = custom,$Config1\r\n";
+echo "$Flag2 = custom,$Config2\r\n";
+echo "$Flag3 = custom,$Config3\r\n";}
 elseif ($Group<"5"){
-echo "$Flag1 = custom,$Config1,$Module\r\n";
-echo "$Flag2 = custom,$Config2,$Module\r\n";
-echo "$Flag3 = custom,$Config3,$Module\r\n";
-echo "$Flag4 = custom,$Config4,$Module\r\n";}
+echo "$Flag1 = custom,$Config1\r\n";
+echo "$Flag2 = custom,$Config2\r\n";
+echo "$Flag3 = custom,$Config3\r\n";
+echo "$Flag4 = custom,$Config4\r\n";}
 elseif ($Group<"6"){
-echo "$Flag1 = custom,$Config1,$Module\r\n";
-echo "$Flag2 = custom,$Config2,$Module\r\n";
-echo "$Flag3 = custom,$Config3,$Module\r\n";
-echo "$Flag4 = custom,$Config4,$Module\r\n";
-echo "$Flag5 = custom,$Config5,$Module\r\n";}
-elseif ($Group>"6"){echo "$Flag1 = custom,$Config1,$Module\r\n";}
-else {echo "$Flag1 = custom,$Config1,$Module\r\n";}
+echo "$Flag1 = custom,$Config1\r\n";
+echo "$Flag2 = custom,$Config2\r\n";
+echo "$Flag3 = custom,$Config3\r\n";
+echo "$Flag4 = custom,$Config4\r\n";
+echo "$Flag5 = custom,$Config5\r\n";}
+elseif ($Group>"6"){echo "$Flag1 = custom,$Config1\r\n";}
+else {echo "$Flag1 = custom,$Config1\r\n";}
 echo "[Proxy Group]\r\n";
 echo "Proxy = select, 🇨🇳, 🇳🇫, 🇬🇧\r\n";
 
