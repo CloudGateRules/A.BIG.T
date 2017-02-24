@@ -10,8 +10,7 @@
 **更新记录: CloudGate规则 [更新记录](UPdate.txt) 列表**
 
 ## 规则地址
-#### 主用线路: https://async.be/Rule/Basic/A.BIG.T.php
-#### 备用线路: <del>https://burpsuite.site/Rule/General/A.BIG.T.php</del>
+#### 主用线路: https://async.be/Rule/Basic/A.BIG.T
 
 ## 更新规则
 #### 推荐使用「在线导入」方式更新规则文件
@@ -19,6 +18,9 @@
 ## 使用方法
 #### 第一步:「A.BIG.T」>「Config」>「Configuration」>「+」>「Download From URL」>「Input URL」>「主用线路/备用线路」>「OK」
 #### 第二步:「A.BIG.T」>「Config」>「Configuration」>「规则」
+
+## 联系方式
+#### [Twitter](https://twitter.com/@OAuth4)
 
 ## License
 - 本项目的所有代码除另有说明外,均按照 [MIT License](LICENSE) 发布。
