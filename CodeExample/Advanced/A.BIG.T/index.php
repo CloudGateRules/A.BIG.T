@@ -35,8 +35,8 @@ echo 'Proxy = select,'.$SERVER_Implode."\r\n";
 # CloudGate模块
 echo "[Rule]\r\n";
 echo Advanced(CURL($RuleList['Default']).$CURLContent,$AutoGroup,$Apple).$Default;
-if($Rule==='true'){echo Advanced(CURL(true,$RuleList['Basic']).$CURLContent,$AutoGroup,$Apple).$Proxy;}
-elseif($Rule==='false'){echo Advanced(CURL(true,$RuleList['Advanced']).$CURLContent,$AutoGroup,$Apple).$Proxy;}
+if($Rule==='true'){echo Advanced(CURL($RuleList['Basic']).$CURLContent,$AutoGroup,$Apple).$Proxy;}
+elseif($Rule==='false'){echo Advanced(CURL($RuleList['Advanced']).$CURLContent,$AutoGroup,$Apple).$Proxy;}
 echo Advanced(CURL($RuleList['DIRECT']).$CURLContent,$AutoGroup,$Apple).$DIRECT;
 echo Advanced(CURL($RuleList['REJECT']).$CURLContent,$AutoGroup,$Apple).$REJECT;
 echo Advanced(CURL($RuleList['KEYWORD']).$CURLContent,$AutoGroup,$Apple).$KEYWORD;
