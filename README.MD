@@ -23,12 +23,12 @@ CloudGate极简规则项目
 ------
 |规则名称|规则地址|
 |---|---|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
-|A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
+|Surge|`https://async.be/Rule/Basic/Surge`|
+|Shadowrocket|`https://async.be/Rule/Basic/Shadowrocket`|
+|Potatso2|`https://async.be/Rule/Basic/Potatso2`|
+|Potatso|`https://async.be/Rule/Basic/Potatso`|
+|Cross|`https://async.be/Rule/Basic/Cross`|
+|Wingy|`https://async.be/Rule/Basic/Wingy`|
 |A.BIG.T|`https://async.be/Rule/Basic/A.BIG.T`|
 |Hosts|`https://async.be/Rule/Basic/Hosts`|
 
